@@ -54,3 +54,32 @@ private class Car(val engineType: String) { // primary constructor
         this.isGasolin = _isGasolin
     }
 }
+
+/**
+ * By default all classes declared in Kotlin is FINAL
+ * In order to make a class extensible, prefix it with OPEN and
+ * all methods or properties should also be prefixed with OPEN
+ *
+ */
+open class View {
+    open fun click() = println("view clicked") // defined function as expression
+}
+
+/**
+ * Following is the language syntax of extending a super class
+ * Primary constructor of the super class must be called in the same line
+ *
+ * To override any base class function or property definition, they need to be
+ * prefixed with OVERRIDE keyword
+ */
+class Button : View() {
+    override fun click() {
+        println("button clicked")
+    }
+}
+
+/** Syntax to declare a private constructor. CONSTRUCTOR keyword is mandatory */
+class ClassWithPrivateConstructor private constructor(val a: String) {
+
+}
+

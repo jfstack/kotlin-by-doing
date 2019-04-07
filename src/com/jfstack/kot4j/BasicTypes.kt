@@ -10,6 +10,18 @@ fun main(args: Array<String>) {
      *
      **/
 
+    val any: Any /** Any is super type of all types in Kotlin like Object in java */
+    val nothing: Nothing /** Nothing is subclass of all types in Kotlin */
+
+    /**
+     * Nothing has no instance. We can use Nothing to represent "a value that never exists"
+     * For example, if a function has a return type as Nothing, it means that it never returns
+     * (always throw exception)
+     */
+    fun alwaysThrowException(): Nothing {
+        throw IllegalArgumentException()
+    }
+
     val num1: Int = 20
     val letter: Char = 'A'
     val name: String = "chandan"
@@ -23,5 +35,13 @@ fun main(args: Array<String>) {
 
     /** declaring an int array of size 4 and all elements initialized with 1990 */
     val years = IntArray(4) { i -> 1990 }
+
+    /**
+     * Since Void is a non-instantiable final class in Java, we can only return null
+     * from such a function
+     */
+    fun voidReturnType(): Void? {
+        return null
+    }
 
 }
