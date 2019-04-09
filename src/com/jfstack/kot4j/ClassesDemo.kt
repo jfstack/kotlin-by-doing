@@ -83,3 +83,19 @@ class ClassWithPrivateConstructor private constructor(val a: String) {
 
 }
 
+
+/**
+ * Data class in Kotlin gets following things free
+ * - The specified fields
+ * - getter/setters
+ * - parameterized constructor
+ * - hashCode implementation
+ * - equals implementation
+ * - toString
+ * - clone
+ *
+ * You cannot use inheritance when writing data class. Data class
+ * cannot extend any base class and are final (you cannot use OPEN keyword)
+ *
+ */
+data class DataClassDemo(val p1: Int, val p2: Int)
